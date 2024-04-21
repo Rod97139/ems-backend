@@ -27,4 +27,10 @@ public class EmployeeController {
         EmployeeDto employeeDto = employeeService.getEmployeeById(employeeId);
         return new ResponseEntity<>(employeeDto, HttpStatus.OK);
     }
+
+    // Build Get All Employees REST API
+    @GetMapping
+    public ResponseEntity<?> getAllEmployees() {
+        return new ResponseEntity<>(employeeService.getAllEmployees(), HttpStatus.OK);
+    }
 }
